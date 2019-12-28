@@ -1,0 +1,12 @@
+---
+version: '3'
+
+services:
+  apt-file:
+    container_name: apt-file
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dceoy/apt-file:latest
+    entrypoint:
+      - /usr/bin/apt-file
