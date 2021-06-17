@@ -3,13 +3,15 @@ docker-apt-file
 
 Dockerfile for apt-file of Ubuntu
 
+[![CI to Docker Hub](https://github.com/dceoy/docker-apt-file/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/dceoy/docker-apt-file/actions/workflows/docker-publish.yml)
+
 Docker image
 ------------
 
 Pull the image from [Docker Hub](https://hub.docker.com/r/dceoy/apt-file/).
 
 ```sh
-$ docker pull dceoy/apt-file
+$ docker image pull dceoy/apt-file
 ```
 
 Usage
