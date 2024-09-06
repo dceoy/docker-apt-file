@@ -3,7 +3,7 @@ docker-apt-file
 
 Dockerfile for apt-file of Ubuntu
 
-[![CI to Docker Hub](https://github.com/dceoy/docker-apt-file/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/dceoy/docker-apt-file/actions/workflows/docker-publish.yml)
+[![CI/CD](https://github.com/dceoy/docker-apt-file/actions/workflows/ci.yml/badge.svg)](https://github.com/dceoy/docker-apt-file/actions/workflows/ci.yml)
 
 Docker image
 ------------
