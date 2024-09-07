@@ -14,11 +14,10 @@ jobs:
     with:
       registry: docker.io
       registry-user: ${{ github.actor }}
-      image-name: apt-file
+      image-name: ${{ github.actor }}/apt-file
       platforms: linux/amd64,linux/arm64
       context: .
       file: ./Dockerfile
       push: true
-      image-artifact-name: docker-image
     secrets:
       DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}

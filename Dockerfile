@@ -21,17 +21,18 @@ RUN \
       apt-get -y update \
       && apt-get -y upgrade \
       && apt-get -y install --no-install-recommends --no-install-suggests \
-        apt-file apt-utils
+        apt-file apt-utils sudo
 
 RUN set -e \
       && apt-file update
 
 RUN \
       groupadd --gid "${USER_GID}" "${USER_NAME}" \
-      && useradd --uid "${USER_UID}" --gid "${USER_GID}" --shell /bin/bash --create-home "${USER_NAME}"
-
-USER "${USER_NAME}"
+      && useradd --uid "${USER_UID}" --gid "${USER_GID}" --shell /bin/bash --create-home "${USER_NAME}" \
+      && echo "${USER_NAME} ALL=(ALL) NOPASSWD:ALL" | tee "/etc/sudoers.d/${USER_NAME}"
 
 HEALTHCHECK NONE
+
+USER "${USER_NAME}"
 
 ENTRYPOINT ["/usr/bin/apt-file"]
