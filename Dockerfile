@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 ARG UBUNTU_VERSION=24.04
-FROM ubuntu:${UBUNTU_VERSION}
+FROM public.ecr.aws/docker/library/ubuntu:${UBUNTU_VERSION}
 
 ARG USER_UID=1001
 ARG USER_GID=1001
