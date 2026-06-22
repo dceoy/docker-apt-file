@@ -5,6 +5,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      cache_from:
+        - type=gha
+      cache_to:
+        - type=gha,mode=max
     image: dceoy/apt-file:latest
     entrypoint:
       - /usr/bin/apt-file
